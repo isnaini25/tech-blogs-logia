@@ -22,6 +22,16 @@ export async function generateMetadata({ params }, parent) {
   };
 }
 
+export async function generateStaticParams() {
+  const posts = await fetch(`entries?content_type=blog-post`).then(
+    (response) => {
+      return response.data.items;
+    }
+  );
+
+  return posts.map((post) => ({ slug: post.fields.slug }));
+}
+
 export default function Page(props) {
   const {
     params: { slug },

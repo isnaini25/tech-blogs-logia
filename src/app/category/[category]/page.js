@@ -17,6 +17,14 @@ export async function generateMetadata({ params }) {
   };
 }
 
+export function generateStaticParams() {
+  return [
+    { category: 'gadget' },
+    { category: 'programming' },
+    { category: 'design' },
+  ];
+}
+
 export default function Page(props) {
   const {
     params: { category },
