@@ -3,6 +3,11 @@ import { ImageResponse } from 'next/server';
 export const runtime = 'edge';
 
 export async function GET() {
+  const size = {
+    width: 1200,
+    height: 630,
+  };
+
   return new ImageResponse(
     (
       <div

@@ -1,9 +1,9 @@
 import PostBySearching from '@/components/PostSection/PostBySearching';
-import { BASE_metadata } from '../page';
+import { baseMetadata } from '@/utils/baseMetadata';
 
 export async function generateMetadata({ searchParams }) {
   const mtd = {
-    ...BASE_metadata,
+    ...baseMetadata,
     title: 'Search | ' + searchParams.keyword,
     url: process.env.NEXT_PUBLIC_BASEURL + 'search',
   };
@@ -13,6 +13,6 @@ export async function generateMetadata({ searchParams }) {
     openGraph: mtd,
   };
 }
-export default function page() {
+export default function Page() {
   return <PostBySearching />;
 }

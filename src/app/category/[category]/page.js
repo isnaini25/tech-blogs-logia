@@ -1,9 +1,9 @@
-import { BASE_metadata } from '@/app/page';
 import PostByCategory from '@/components/PostSection/PostByCategory';
+import { baseMetadata } from '@/utils/baseMetadata';
 
 export async function generateMetadata({ params }) {
   const mtd = {
-    ...BASE_metadata,
+    ...baseMetadata,
     title: `Logia | ${
       params.category.charAt(0).toUpperCase() + params.category.slice(1)
     }`,

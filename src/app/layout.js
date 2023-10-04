@@ -1,5 +1,5 @@
-import Layout from '@/components/Layout/Layout';
 import './globals.css';
+import Layout from '@/components/Layout/Layout';
 import { Inter } from 'next/font/google';
 import ReactQueryProvider from '@/query/ReactQueryProvider';
 

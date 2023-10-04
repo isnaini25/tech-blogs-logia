@@ -1,12 +1,12 @@
 'use client';
-import Image from 'next/image';
-import PopularPosts from '../PostSection/PopularPosts';
-import dateFormat from '@/utils/dateFormat';
 import { useQuery } from '@tanstack/react-query';
-import { fetch } from '@/utils/axiosConfig';
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
+import Image from 'next/image';
 import ImageLoading from '../Loading/ImageLoading';
 import ArticleLoading from '../Loading/ArticleLoading';
+import PopularPosts from '../PostSection/PopularPosts';
+import dateFormat from '@/utils/dateFormat';
+import { fetch } from '@/utils/axiosConfig';
+import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 
 export default function Post({ slug }) {
   const { data, isLoading, isFetching } = useQuery({
