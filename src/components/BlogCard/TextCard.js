@@ -13,11 +13,10 @@ export default function TextCard(props) {
           <Image
             alt={props.slug}
             src={props.thumbnail}
-            // width={100}
-            // height={100}
+            width={420}
+            height={250}
             // style={{ width: '100px', height: '100px' }}
             className='object-cover'
-            fill={true}
           />
         </div>
       )}

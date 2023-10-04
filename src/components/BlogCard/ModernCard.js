@@ -26,7 +26,8 @@ export default function ModernCard(props) {
           alt={props.slug}
           src={props.thumbnail}
           className='aspect-square h-full w-full object-cover '
-          fill={true}
+          fill
+          sizes='100%'
         />
       </div>
 

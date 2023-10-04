@@ -5,13 +5,15 @@ import Link from 'next/link';
 export default function BlogCard(props) {
   return (
     <Link
-      className='overflow-hidden  max-w-screen-sm rounded-lg shadow transition hover:shadow-lg bg-white'
+      className='overflow-hidden  max-w-screen-sm rounded-lg shadow transition hover:shadow-lg bg-white '
       href={`/article/${props.slug}`}
     >
-      <img
+      <Image
         alt={props.slug}
         src={props.thumbnail}
         className='h-56 w-full object-cover '
+        width={420}
+        height={250}
       />
 
       <div className='p-4 sm:p-3'>

@@ -10,7 +10,8 @@ export default function Category({ image, name, active }) {
       }`}
     >
       <Image
-        fill={true}
+        fill
+        sizes='100%'
         alt={name}
         src={image}
         className={`absolute inset-0 h-full w-full object-cover transition-opacity group-hover:opacity-70 rounded-md  ${

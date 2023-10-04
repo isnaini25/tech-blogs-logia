@@ -34,7 +34,8 @@ export default function Post({ slug }) {
         <>
           <div className='w-screen h-[50vh] md:h-[90vh] relative '>
             <Image
-              fill={true}
+              fill
+              sizes='100vw'
               alt={data.slug}
               src={data.thumbnail}
               className='w-full object-cover'

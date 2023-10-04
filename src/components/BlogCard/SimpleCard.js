@@ -1,10 +1,13 @@
 import dateFormat from '@/utils/dateFormat';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function SimpleCard(props) {
   return (
     <Link href={`/article/${props.slug}`} className='block group'>
-      <img
+      <Image
+        width={630}
+        height={375}
         src={props.thumbnail}
         alt={props.slug}
         className='object-cover w-full rounded aspect-square max-h-[50vh]'
