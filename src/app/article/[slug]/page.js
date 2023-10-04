@@ -14,6 +14,7 @@ export async function generateMetadata({ params }, parent) {
     title: post.title,
     description: post.subtitle,
     url: 'https://logia.isnainis.tech/article/' + params.slug,
+    images: 'https://logia.isnainis.tech/og',
   };
   return {
     ...metadata,
