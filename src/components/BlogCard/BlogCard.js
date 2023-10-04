@@ -28,7 +28,7 @@ export default function BlogCard(props) {
             {props.category}
           </span>
         </div>
-        <h3 className='mt-0.5 text-lg text-gray-900'>{props.title}</h3>
+        <h1 className='mt-0.5 text-lg text-gray-900'>{props.title}</h1>
 
         <p className='mt-2 line-clamp-3 text-sm/relaxed text-gray-500'>
           {props.subtitle}

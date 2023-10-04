@@ -33,7 +33,7 @@ export default function ModernCard(props) {
 
       <div className='flex flex-1 flex-col justify-between'>
         <div className='border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6'>
-          <h3 className='font-bold uppercase text-gray-900'>{props.title}</h3>
+          <h1 className='font-bold uppercase text-gray-900'>{props.title}</h1>
 
           <p className='mt-2 line-clamp-3 text-sm/relaxed text-gray-700'>
             {props.subtitle}

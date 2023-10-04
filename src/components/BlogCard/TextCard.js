@@ -21,9 +21,9 @@ export default function TextCard(props) {
         </div>
       )}
       <div className='w-[70%]'>
-        <h3 className='mt-0.5 mb-1 text-md font-medium text-gray-900'>
+        <h1 className='mt-0.5 mb-1 text-md font-medium text-gray-900'>
           {props.title}
-        </h3>
+        </h1>
 
         <div className='mt-4 flex flex-wrap '>
           <span className='whitespace-nowrap rounded-full bg-blue-100 px-2.5 py-0.5 text-xs text-slate-600 mr-3'>

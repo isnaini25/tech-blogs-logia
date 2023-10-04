@@ -1,12 +1,9 @@
 'use client';
 import { useQuery } from '@tanstack/react-query';
-import Heading from '../UI/Heading';
 import { queryFn } from '@/query/queryFn';
 import Button from '../UI/Button';
 import BlogCard from '../BlogCard/BlogCard';
-import BlogCardLoading from '../Loading/BlogCardLoading';
 import { useState } from 'react';
-import Categories from './Categories';
 import { useSearchParams } from 'next/navigation';
 
 export default function PostBySearching() {
@@ -33,11 +30,9 @@ export default function PostBySearching() {
 
   return (
     <div className='w-[90vw] mx-auto my-12 min-h-[50vh]'>
-      <Heading
-        text={`You search about ${keyword}...`}
-        className={'text-center text-4xl mb-6 '}
-      />
       <p className='text-center text-lg mb-3'>
+        {`You search about ${keyword}...`}
+        <br />
         {isFetching ? 'Searching...' : `${data && data.length} article found`}
       </p>
       <div className='grid grid-cold-1 md:grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8 place-content-center xl:grid-cols-4'>

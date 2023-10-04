@@ -20,9 +20,9 @@ export default function SimpleCard(props) {
         >
           {dateFormat(props.createdAt)}
         </time>
-        <h3 className='font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4'>
+        <h1 className='font-medium text-gray-900 group-hover:underline group-hover:underline-offset-4'>
           {props.title}
-        </h3>
+        </h1>
 
         <p className='mt-1 text-sm text-gray-700'>{props.subtitle}</p>
       </div>
