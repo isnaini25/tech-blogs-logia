@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 export const fetch = axios.create({
-  baseURL: `https://preview.contentful.com/spaces/${process.env.NEXT_PUBLIC_SPACEID}/environments/master/`,
+  baseURL: `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_SPACEID}/environments/master/`,
   headers: {
-    Authorization: `Bearer ${process.env.NEXT_PUBLIC_PREVIEW_TOKEN}`,
+    Authorization: `Bearer ${process.env.NEXT_PUBLIC_ACCESS_TOKEN}`,
   },
 });
