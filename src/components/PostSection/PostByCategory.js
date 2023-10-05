@@ -41,7 +41,7 @@ export default function PostByCategory({ category }) {
         heading={false}
       />
       <Heading text={capCategory} className={'text-center text-4xl mb-6 '} />
-      <div className='grid grid-cold-1 md:grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8 place-content-center xl:grid-cols-4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8 place-content-center xl:grid-cols-4'>
         {isLoading || !isFetchedAfterMount
           ? Loading
           : data
