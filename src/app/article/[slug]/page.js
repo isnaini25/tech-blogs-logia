@@ -2,12 +2,15 @@ import Post from '@/components/Post/Post';
 import RecentPosts from '@/components/PostSection/RecentPosts';
 import { fetch } from '@/utils/axiosConfig';
 
-export async function generateMetadata({ params }, parent) {
+export async function generateMetadata({ params }) {
   // fetch data
   const post = await fetch(
     `entries?content_type=blog-post&fields.slug=${params.slug}`
   ).then((response) => {
-    return { ...response.data.items[0].fields };
+    return {
+      ...response.data.items[0].fields,
+      createdAt: response.data.items[0].sys.createdAt,
+    };
   });
 
   const metadata = {
@@ -16,15 +19,18 @@ export async function generateMetadata({ params }, parent) {
     url: 'https://logia.isnainis.tech/article/' + params.slug,
     images: {
       url: post.thumbnail,
-      width: 1200,
-      height: 630,
       alt: post.title,
     },
   };
   return {
     ...metadata,
     twitter: metadata,
-    openGraph: metadata,
+    openGraph: {
+      ...metadata,
+      type: 'article',
+      publishedTime: post.createdAt,
+      tag: post.category,
+    },
   };
 }
 
